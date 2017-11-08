@@ -1,0 +1,36 @@
+﻿@using Sitecore.Mvc;
+
+@inherits WebViewPage
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="@Sitecore.Context.Language.CultureInfo.TwoLetterISOLanguageName">
+<!--<![endif]-->
+<head>
+
+    <title>Welcome to Sitecore</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="CODE_LANGUAGE" content="C#" />
+    <meta name="vs_defaultClientScript" content="JavaScript" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600italic,700italic,300,600,700,800" rel="stylesheet" type="text/css" />
+
+    <link href="/default.css" rel="stylesheet" />
+    <link href="~/sitecore modules/Shell/Editors/Website/Point Of Interest Map/styles/styles.css" rel="stylesheet" />
+    <link href="~/sitecore modules/Shell/Editors/Website/Point Of Interest Map/styles/font-awesome.min.css" rel="stylesheet" />
+    <sc:VisitorIdentification runat='server' />
+</head>
+<body>
+
+    <main role="main">
+        @Html.Sitecore().Placeholder("Center")
+    </main>
+
+</body>
+</html>
+

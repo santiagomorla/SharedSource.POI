@@ -1,0 +1,112 @@
+﻿/* 
+    Sitecore - Point of Interest Module. 2017. 
+    Author: CMS Xperience (http://www.cmsxperience.com)
+*/
+
+div,span {
+    display: block;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.poi-map__container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.poi-map__wrapper {
+    position: relative;
+    height: 100%
+}
+
+.poi-map__poi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 180px;
+    cursor: pointer;
+    -webkit-transform: translateX(-50%) translateY(-100%);
+    -ms-transform: translateX(-50%) translateY(-100%);
+    transform: translateX(-50%) translateY(-100%);
+}
+
+.poi-map__poi--no-images {
+    cursor: auto;
+}
+
+.poi-map__poi-title {
+    font-size: .75rem;
+    font-weight: 700;
+    display: none;
+    overflow: hidden;
+    max-width: 205px;
+    margin-bottom: 10px;
+    padding: 2px 20px;
+    transition: all .25s ease;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+}
+
+.poi-map__poi-title {
+    display: inline-block;
+    color: #e24949;
+}
+
+.fa {
+    color: #e24949;
+    font-size: 2.5em !important;    
+}
+
+.poi-map__poi:hover .poi-map__poi-title, .poi-map__poi:hover .fa, .fa:hover {
+    color: #63666a;
+    transition: all .25s ease;
+}
+
+.error {
+    color: red;
+    font-weight: normal; 
+    font-size: smaller; 
+}
+
+.ui-widget-header {
+    background: #00b5e2;
+    border: 0;
+}
+
+#dialogCreate fieldset {
+    border: 0;
+    padding: 0;
+}
+
+.ui-dialog .ui-dialog-title {
+    color: white;
+}
+
+#mapsForm label {
+    font-weight: bold;
+    height: 20px;
+    width: 60px;
+    margin-top: 14px;
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+
+#mapsForm .form-field {
+    height: 20px;
+    width: 170px;
+    margin-top: 10px;
+    float: left;
+}
+
+#mapsForm input[type=button] {
+    float: right;
+    margin-top: 15px;
+}

@@ -1,0 +1,32 @@
+@using Sitecore.Mvc
+@model Sitecore.Data.Items.Item
+
+<div class="poi-map module">
+    <div class="module__container">
+        
+        <div class="poi-map__container">
+            <div class="poi-map__wrapper">
+                @{ var icon = "fa-map-marker"; }
+                
+                @Html.Sitecore().Field("Background Image", new { @class = "poi-map__img" })
+
+                @if (Model.Children != null && Model.Children.Any())
+                {
+                    <!-- Render POI items -->
+                    foreach (Sitecore.Data.Items.Item poi in Model.Children)
+                    {
+                        <div data-poi-id="@poi.ID.Guid" class="poi-map__poi poi-map__poi--no-images" style="top: @poi.Fields["Top"]%; left: @poi.Fields["Left"]%;">
+                            @if (poi.Fields["Title"] != null && !string.IsNullOrWhiteSpace(poi.Fields["Title"].Value))
+                            {
+                                <h3 class="poi-map__poi-title">@poi.Fields["Title"]</h3>   
+                            }
+
+                            <span><i class="fa @(poi.Fields["Icon Class"] != null && !string.IsNullOrWhiteSpace(poi.Fields["Icon Class"].Value) ? poi.Fields["Icon Class"].Value : icon)" aria-hidden="true"></i></span>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
